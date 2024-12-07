@@ -40,4 +40,3 @@ def filter(file_name):
         print(f"Error: The file '{input_filename}' does not exist.")
     except Exception as e:
         print(f"An error occurred: {e}")
-filter('Node1.txt')
