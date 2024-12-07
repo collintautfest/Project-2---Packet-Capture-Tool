@@ -4,6 +4,7 @@ from filter_packets import *
 from packet_parser import *
 from compute_metrics import *
 import os
+import csv
 
 def main():
     '''
@@ -29,6 +30,18 @@ def main():
     # call parser for each item of filtered_list
     # inside call compute metrics for each parsed item
 
+    # if old csv exists clear it
+    if os.path.exists("output.csv"):
+        os.remove("output.csv")
+        print("")
+        print("cleared output")
     # print output to csv
+    '''
+    with open("output.csv", 'w') as outfile:
+        # get compute metrics and print
+        writer = csv.writer(outfile)
+
+    '''
+    print ("Complete!")
 
 main()
