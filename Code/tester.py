@@ -3,12 +3,8 @@ import sys
 
 timeArrRequest = []
 timeArrReply = []
-
-
-
 hopCount =[]
 rep=0
-
 c1=0
 throughReqSent = []
 c2=0
@@ -18,32 +14,37 @@ throughReqSent2 = []
 c4=0
 throughRepSent2 = []
 
+src=""
 
 with open('/Users/ethanmenand/Downloads/Code 2/Project-2---Packet-Capture-Tool/Code/Node1_filtered.txt') as file:
+    next(file)
     for line in file:
         l = line.split()
+        
         if len(l)>5:
+            if src=="":
+                src=l[3]
+                print(src)
             if len(l)>7 and l[7]!='unreachable': 
                 if(l[4]=='ICMP'):
-                    #print(l)
                     
                     
-                    if l[8]=="request" and l[2]=='192.168.100.1':
+                    if l[8]=="request" and l[2]==src:
                         timeArrRequest.append(float(l[1]))
                         throughReqSent.append(float(l[5]))
                         c1+=1
-                    elif l[8]=="reply" and l[2]=='192.168.100.1':
+                    elif l[8]=="reply" and l[2]==src:
                         timeArrReply.append(float(l[1]))
                         hopCount.append(128-int(l[11][4:])+1)
                         throughRepSent.append(float(l[5]))
                         print(l[5])
                         c2+=1
-                    elif l[8]=="request" and l[3]=='192.168.100.1':
+                    elif l[8]=="request" and l[3]==src:
                         timeArrRequest.append(float(l[1]))
                         throughReqSent2.append(float(l[5]))
                         
                         c3+=1
-                    elif l[8]=="reply" and l[3]=='192.168.100.1':
+                    elif l[8]=="reply" and l[3]==src:
                         timeArrReply.append(float(l[1]))
                         hopCount.append(128-int(l[11][4:])+1)
                         throughRepSent2.append(float(l[5]))
@@ -112,6 +113,6 @@ print(delay)
 
 hopAVG=hops/count1
 print(hopAVG)
-
+vars = [c1,c2,c3,c4,throughAvg,adjusted,throughAvg2,adjusted2,rtt,throughput,goodput,hopAVG]
 
 
