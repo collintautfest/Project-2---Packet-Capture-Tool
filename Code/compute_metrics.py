@@ -22,8 +22,10 @@ def compute(file_path):
     c4=0
     throughRepSent2 = []
     
+    src=""
     
     with open(file_path) as file:
+        next(file)
         for line in file:
             l = line.split()
             if len(l)>5:
