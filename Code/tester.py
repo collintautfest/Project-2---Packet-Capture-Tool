@@ -1,3 +1,4 @@
+'''
 import os
 import sys
 
@@ -115,4 +116,4 @@ hopAVG=hops/count1
 print(hopAVG)
 vars = [c1,c2,c3,c4,throughAvg,adjusted,throughAvg2,adjusted2,rtt,throughput,goodput,hopAVG]
 
-
+'''

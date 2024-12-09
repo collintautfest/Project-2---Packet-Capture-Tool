@@ -1,7 +1,7 @@
 Node 1
 
 Echo Requests Sent,Echo Requests Recieved,Echo Replies Sent,Echo Replies Recieved
-,,,
+40,4,4,40
 Echo Requests Sent (bytes),Echo Requests Data Sent (bytes)
 ,
 Echo Requests Recieved (bytes),Echo Requests Data Recieved
@@ -15,7 +15,7 @@ Average Echo Request Hop Count,
 Node 2
 
 Echo Requests Sent,Echo Requests Recieved,Echo Replies Sent,Echo Replies Recieved
-,,,
+40,4,4,40
 Echo Requests Sent (bytes),Echo Requests Data Sent (bytes)
 ,
 Echo Requests Recieved (bytes),Echo Requests Data Recieved
@@ -29,7 +29,7 @@ Average Echo Request Hop Count,
 Node 3
 
 Echo Requests Sent,Echo Requests Recieved,Echo Replies Sent,Echo Replies Recieved
-,,,
+40,4,4,40
 Echo Requests Sent (bytes),Echo Requests Data Sent (bytes)
 ,
 Echo Requests Recieved (bytes),Echo Requests Data Recieved
@@ -43,7 +43,7 @@ Average Echo Request Hop Count,
 Node 4
 
 Echo Requests Sent,Echo Requests Recieved,Echo Replies Sent,Echo Replies Recieved
-,,,
+40,4,4,40
 Echo Requests Sent (bytes),Echo Requests Data Sent (bytes)
 ,
 Echo Requests Recieved (bytes),Echo Requests Data Recieved
