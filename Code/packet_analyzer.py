@@ -28,7 +28,19 @@ def main():
         filtered_list.append(f"Node{i}_filtered.txt")
     
     # call parser for each item of filtered_list
-    # inside call compute metrics for each parsed item
+    if os.path.exists("Data_File.txt"):
+        os.remove("Data_File.txt")
+        print("cleared Data File")
+
+    for par in range(1,5):
+        parse(f"Node{par}_filtered.txt")
+
+        # inside call compute metrics for each parsed item
+
+        # clear for reset
+        os.remove("Data_File.txt")
+        print(f"Cleared{par}")
+
 
     # if old csv exists clear it
     if os.path.exists("output.csv"):
