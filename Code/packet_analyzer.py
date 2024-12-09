@@ -34,9 +34,9 @@ def main():
 
     for par in range(1,5):
         parse(f"Node{par}_filtered.txt")
-
+        computed_list = []
         # inside call compute metrics for each parsed item
-
+        computed_list = compute(f"Node{par}_filtered.txt")
         # clear for reset
         os.remove("Data_File.txt")
         print(f"Cleared{par}")
@@ -47,28 +47,28 @@ def main():
         os.remove("output.csv")
         print("")
         print("cleared output")
-    # print output to csv
-    with open("output.csv", 'w', newline="") as outfile:
-        # get compute metrics and print
-        writer = csv.writer(outfile, delimiter=',')
-        for i in range (1, 5):
-            dat = [ 
-                [f'Node {i}'],
-                [],
-                ['Echo Requests Sent', 'Echo Requests Recieved', 'Echo Replies Sent', 'Echo Replies Recieved'],
-                ['','','',''],
-                ['Echo Requests Sent (bytes)', 'Echo Requests Data Sent (bytes)'],
-                ['',''],
-                ['Echo Requests Recieved (bytes)', 'Echo Requests Data Recieved'],
-                ['',''],
-                ['Average RTT', ''],
-                ['Echo Request Throughput (kB/sec)',''],
-                ['Echo Request Goodput (kB/sec)', ''],
-                ['Average Reply Delay (us)', ''],
-                ['Average Echo Request Hop Count',''],
-                []
-            ]
-            writer.writerows(dat)
+        # print output to csv
+        with open("output.csv", 'w', newline="") as outfile:
+            # get compute metrics and print
+            writer = csv.writer(outfile, delimiter=',')
+            for i in range (1, 5):
+                dat = [ 
+                    [f'Node {i}'],
+                    [],
+                    ['Echo Requests Sent', 'Echo Requests Recieved', 'Echo Replies Sent', 'Echo Replies Recieved'],
+                    ['','','',''],
+                    ['Echo Requests Sent (bytes)', 'Echo Requests Data Sent (bytes)'],
+                    ['',''],
+                    ['Echo Requests Recieved (bytes)', 'Echo Requests Data Recieved'],
+                    ['',''],
+                    ['Average RTT', ''],
+                    ['Echo Request Throughput (kB/sec)',''],
+                    ['Echo Request Goodput (kB/sec)', ''],
+                    ['Average Reply Delay (us)', ''],
+                    ['Average Echo Request Hop Count',''],
+                    []
+                ]
+                writer.writerows(dat)
 
     print ("Complete!")
 
