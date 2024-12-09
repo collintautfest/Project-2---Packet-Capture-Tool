@@ -18,7 +18,11 @@ def main():
         if os.path.exists(f"Node{item}_filtered.txt"):
             os.remove(f"Node{item}_filtered.txt")
             print(f"cleared Node{item}")
-
+    # if old csv exists clear it
+    if os.path.exists("output.csv"):
+        os.remove("output.csv")
+        print("")
+        print("cleared output")
     
     filtered_list = [] # list of filtered packets
     
@@ -41,12 +45,6 @@ def main():
         os.remove("Data_File.txt")
         print(f"Cleared{par}")
 
-
-    # if old csv exists clear it
-    if os.path.exists("output.csv"):
-        os.remove("output.csv")
-        print("")
-        print("cleared output")
         # print output to csv
         with open("output.csv", 'w', newline="") as outfile:
             # get compute metrics and print
