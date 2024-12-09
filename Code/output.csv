@@ -1,0 +1,56 @@
+Node 1
+
+Echo Requests Sent,Echo Requests Recieved,Echo Replies Sent,Echo Replies Recieved
+,,,
+Echo Requests Sent (bytes),Echo Requests Data Sent (bytes)
+,
+Echo Requests Recieved (bytes),Echo Requests Data Recieved
+,
+Average RTT,
+Echo Request Throughput (kB/sec),
+Echo Request Goodput (kB/sec),
+Average Reply Delay (us),
+Average Echo Request Hop Count,
+
+Node 2
+
+Echo Requests Sent,Echo Requests Recieved,Echo Replies Sent,Echo Replies Recieved
+,,,
+Echo Requests Sent (bytes),Echo Requests Data Sent (bytes)
+,
+Echo Requests Recieved (bytes),Echo Requests Data Recieved
+,
+Average RTT,
+Echo Request Throughput (kB/sec),
+Echo Request Goodput (kB/sec),
+Average Reply Delay (us),
+Average Echo Request Hop Count,
+
+Node 3
+
+Echo Requests Sent,Echo Requests Recieved,Echo Replies Sent,Echo Replies Recieved
+,,,
+Echo Requests Sent (bytes),Echo Requests Data Sent (bytes)
+,
+Echo Requests Recieved (bytes),Echo Requests Data Recieved
+,
+Average RTT,
+Echo Request Throughput (kB/sec),
+Echo Request Goodput (kB/sec),
+Average Reply Delay (us),
+Average Echo Request Hop Count,
+
+Node 4
+
+Echo Requests Sent,Echo Requests Recieved,Echo Replies Sent,Echo Replies Recieved
+,,,
+Echo Requests Sent (bytes),Echo Requests Data Sent (bytes)
+,
+Echo Requests Recieved (bytes),Echo Requests Data Recieved
+,
+Average RTT,
+Echo Request Throughput (kB/sec),
+Echo Request Goodput (kB/sec),
+Average Reply Delay (us),
+Average Echo Request Hop Count,
+
