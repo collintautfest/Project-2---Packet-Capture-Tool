@@ -27,31 +27,33 @@ def compute(file_path):
         for line in file:
             l = line.split()
             if len(l)>5:
+                if src=="":
+                    src=l[3]
+                    
                 if len(l)>7 and l[7]!='unreachable': 
                     if(l[4]=='ICMP'):
-                        #print(l)
-                    
-                    
-                        if l[8]=="request" and l[2]=='192.168.100.1':
+                        
+                        
+                        if l[8]=="request" and l[2]==src:
                             timeArrRequest.append(float(l[1]))
                             throughReqSent.append(float(l[5]))
                             c1+=1
-                        elif l[8]=="reply" and l[2]=='192.168.100.1':
+                        elif l[8]=="reply" and l[2]==src:
                             timeArrReply.append(float(l[1]))
                             hopCount.append(128-int(l[11][4:])+1)
                             throughRepSent.append(float(l[5]))
+                            
                             c2+=1
-                        elif l[8]=="request" and l[3]=='192.168.100.1':
+                        elif l[8]=="request" and l[3]==src:
                             timeArrRequest.append(float(l[1]))
                             throughReqSent2.append(float(l[5]))
                             
                             c3+=1
-                        elif l[8]=="reply" and l[3]=='192.168.100.1':
+                        elif l[8]=="reply" and l[3]==src:
                             timeArrReply.append(float(l[1]))
                             hopCount.append(128-int(l[11][4:])+1)
                             throughRepSent2.append(float(l[5]))
                             c4+=1
-
     avg = 0
     throughAvg = 0
     adjusted=0
