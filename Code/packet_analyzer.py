@@ -57,9 +57,9 @@ def main():
                 [f'{c_list[4]}',f'{c_list[5]}'],
                 ['Echo Requests Recieved (bytes)', 'Echo Requests Data Recieved'],
                 [f'{c_list[6]}',f'{c_list[7]}'],
-                ['Average RTT', f'{c_list[8]}'],
-                ['Echo Request Throughput (kB/sec)',f'{c_list[9]}'],
-                ['Echo Request Goodput (kB/sec)', f'{c_list[10]}'],
+                ['Average RTT', f'{c_list[8]:.2f}'],
+                ['Echo Request Throughput (kB/sec)',f'{c_list[9] * 1000 :.1f}'],
+                ['Echo Request Goodput (kB/sec)', f'{c_list[10] * 1000 :.1f}'],
                 ['Average Reply Delay (us)', ''],
                 ['Average Echo Request Hop Count',f'{c_list[11]}'],
                 []

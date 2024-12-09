@@ -40,7 +40,6 @@ def compute(file_path):
                             timeArrReply.append(float(l[1]))
                             hopCount.append(128-int(l[11][4:])+1)
                             throughRepSent.append(float(l[5]))
-                            print(l[5])
                             c2+=1
                         elif l[8]=="request" and l[3]=='192.168.100.1':
                             timeArrRequest.append(float(l[1]))
